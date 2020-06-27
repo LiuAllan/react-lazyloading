@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-lazyloading/static/css/main.f3138445.chunk.css",
+    "main.js": "/react-lazyloading/static/js/main.f3a9feed.chunk.js",
+    "main.js.map": "/react-lazyloading/static/js/main.f3a9feed.chunk.js.map",
+    "runtime-main.js": "/react-lazyloading/static/js/runtime-main.d926dab1.js",
+    "runtime-main.js.map": "/react-lazyloading/static/js/runtime-main.d926dab1.js.map",
+    "static/js/2.5baaf2e7.chunk.js": "/react-lazyloading/static/js/2.5baaf2e7.chunk.js",
+    "static/js/2.5baaf2e7.chunk.js.map": "/react-lazyloading/static/js/2.5baaf2e7.chunk.js.map",
+    "index.html": "/react-lazyloading/index.html",
+    "precache-manifest.ec774b5bf63de6883e4cca1177628e0d.js": "/react-lazyloading/precache-manifest.ec774b5bf63de6883e4cca1177628e0d.js",
+    "service-worker.js": "/react-lazyloading/service-worker.js",
+    "static/css/main.f3138445.chunk.css.map": "/react-lazyloading/static/css/main.f3138445.chunk.css.map",
+    "static/js/2.5baaf2e7.chunk.js.LICENSE.txt": "/react-lazyloading/static/js/2.5baaf2e7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d926dab1.js",
+    "static/js/2.5baaf2e7.chunk.js",
+    "static/css/main.f3138445.chunk.css",
+    "static/js/main.f3a9feed.chunk.js"
+  ]
+}
