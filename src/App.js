@@ -1,26 +1,73 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import data from './data';
+import LazyLoad from 'react-lazyload';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const Loading = () => (
+  <div className="post-loading">
+    <h5>Loading...</h5>
+    <svg
+      width="80"
+      height="80"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        stroke="#49d1e0"
+        strokeWidth="10"
+        r="35"
+        strokeDasharray="164.93361431346415 56.97787143782138"
+        transform="rotate(275.845 50 50)"
+      >
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          calcMode="linear"
+          values="0 50 50;360 50 50"
+          keyTimes="0;1"
+          dur="1s"
+          begin="0s"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </svg>
+  </div>
+);
+
+const Post = ({id, title, body}) => (
+  <div className="post">
+    {/*Render a lower-quality image*/}
+    <LazyLoad
+      once={true}
+      placeholder={<img src={`https://picsum.photos/id/${id}/5/5`} alt="..." />}
+    >
+      <div className="post-img">
+        <img src={`https://picsum.photos/id/${id}/300/300`} alt="..."/>
+      </div>
+    </LazyLoad>
+    <div className="post-body">
+      <h4>{title}</h4>
+      <p>{body}</p>
     </div>
-  );
-}
+  </div>
+);
+
+const App = () => (
+  <div className="App">
+    <h2>Twitter's Lazy Loading</h2>
+    <div className="post-container">
+      {/*in our data array map for each post item.
+      Wrap the Lazyload component with each item we are loading.
+      placeholder is the what to display during loading*/}
+      {data.map(post => (
+          <LazyLoad key={post.id} placeholder={<Loading />}>
+            <Post key={post.id} {...post} />
+          </LazyLoad>
+        ))}
+    </div>
+  </div>
+);
 
 export default App;
