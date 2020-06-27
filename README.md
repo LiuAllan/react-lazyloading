@@ -8,3 +8,5 @@ For really large images, this app loads a lower quality image (as a placeholder)
 - Reads in data from data.js
 - Uses LazyLoad component from 'react-lazyload'
 - Spinning icon using svg
+
+See working project here: https://liuallan.github.io/react-lazyloading/
